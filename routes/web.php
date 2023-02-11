@@ -16,10 +16,7 @@ use Illuminate\Support\Facades\Storage;
 Route::get('/', function () {return view("companies.index");});
 Route::controller(CompaniesController::class)->group(function () {
     Route::get('api/v1/companies/index', 'index');
-    Route::delete('api/v1/companies/delete/{id}', 'destroy');
-    Route::post('api/v1/companies/create', 'store');
-    Route::get('api/v1/companies/show/{id}', 'show');
-    Route::patch('api/v1/companies/update/{id}', 'update');
+
 });
 
 
